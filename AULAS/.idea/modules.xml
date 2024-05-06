@@ -5,8 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/AULAS.iml" filepath="$PROJECT_DIR$/AULAS.iml" />
       <module fileurl="file://$PROJECT_DIR$/CorrecaoProva01/CorrecaoProva01.iml" filepath="$PROJECT_DIR$/CorrecaoProva01/CorrecaoProva01.iml" />
       <module fileurl="file://$PROJECT_DIR$/EstruturaDeRepeticao/EstruturaDeRepeticao.iml" filepath="$PROJECT_DIR$/EstruturaDeRepeticao/EstruturaDeRepeticao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicio- OOP/Exercicio- OOP.iml" filepath="$PROJECT_DIR$/Exercicio- OOP/Exercicio- OOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Vetor-Matriz/Funcoes.iml" filepath="$PROJECT_DIR$/Vetor-Matriz/Funcoes.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrientacaoAoObjeto/OrientacaoAoObjeto.iml" filepath="$PROJECT_DIR$/OrientacaoAoObjeto/OrientacaoAoObjeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projeto Conta Bancaria/Projeto Conta Bancaria.iml" filepath="$PROJECT_DIR$/Projeto Conta Bancaria/Projeto Conta Bancaria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TESTES/TESTES.iml" filepath="$PROJECT_DIR$/TESTES/TESTES.iml" />
       <module fileurl="file://$PROJECT_DIR$/Vetor/Vetor.iml" filepath="$PROJECT_DIR$/Vetor/Vetor.iml" />
     </modules>
   </component>

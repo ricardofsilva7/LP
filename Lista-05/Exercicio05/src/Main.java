@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int[] vetores() {
+    public static int[] vetores() {             //FUNÇÃO RECEBE NUMERO DE ELEMENTOS DO ARRAY E ARMAZENA OS VALORES DIGITADOS PELO USUARIO
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite a quantidade elementos no array");
         int tamanho = scanner.nextInt();
@@ -19,7 +19,7 @@ public class Main {
         return vetor;
     }
 
-    public static int buscaBinaria(int[] numeros, int alvo)
+    public static int buscaBinaria(int[] numeros, int alvo)  //FUNÇÃO CRIADA PARA REALIZAR A BUSCA DO ELEMENTO
     {
         int esquerda = 0;
         int direita = numeros.length - 1;
@@ -40,7 +40,7 @@ public class Main {
         return -1;
     }
 
-    public static void main(String[] args)
+    public static void main(String[] args) //RECEBE O NUMERO PARA SER BUSCADO E APÓS, FAZ A CHAMADA DAS FUNÇÕES
     {
         int[] meuArray = vetores();
 

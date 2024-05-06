@@ -20,23 +20,27 @@ public class OrientacaoAoObjeto {
 
     //Metodos
     public void andarFrente (){
-        if(posY>0)
-        posY--;
+        if(posY>0) {
+            posY--;
+        }
     }
     public void andarRe (){
-        if (posY<1080-altura)
-        posY++;
+        if (posY<1080-altura) {
+            posY++;
+        }
     }
 
 
     public void andarEsquerda (){
-        if (posX>0)
-        posX--;
-}
+        if (posX>0) {
+            posX--;
+        }
+        }
 
     public void AndarDireita (){
-        if (posX<1920-largura)
-        posX++;
+        if (posX<1920-largura) {
+            posX++;
+        }
     }
 
     @java.lang.Override
