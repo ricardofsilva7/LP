@@ -4,7 +4,7 @@ public class Main {
         int[] rotev = new int[vetor.length];
 
         for (int i = 0; i < vetor.length; i++) {
-            rotev[(vetor.length - 1) - 1] = vetor[i];
+            rotev[(vetor.length - i)-1] = vetor[i];
         }
         for (int n: vetor) {
             System.out.print(n + " ");
