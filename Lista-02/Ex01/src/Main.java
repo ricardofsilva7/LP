@@ -16,6 +16,5 @@ public class Main {
             System.out.println("A raiz quadrada de " + valor1 + " é igual a: " + resultado);
         }
 
-
     }
 }
