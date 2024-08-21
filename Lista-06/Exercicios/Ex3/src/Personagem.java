@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Personagem {
     private String nome;
     private int vida;
@@ -37,10 +36,5 @@ class Personagem {
     // Getter para o nome do personagem
     public String getNome() {
         return this.nome;
-=======
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
->>>>>>> 3d91f720efe09e14da91368b5dd801df9da86fcd
     }
 }
