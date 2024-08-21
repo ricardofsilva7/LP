@@ -1,12 +1,13 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 @SuppressWarnings("serial")
-public class Screensaver extends javax.swing.JFrame implements Runnable {
+public class Screensaver extends javax.swing.JFrame implements Runnable{
 
     // tamanho da tela
-    private int height = 1000;
-    private int width = 1500;
+    private int height = 600;
+    private int width = 800;
 
     // teclas
     /*
@@ -42,7 +43,6 @@ public class Screensaver extends javax.swing.JFrame implements Runnable {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
             }
-
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 formKeyReleased(evt);
             }
@@ -78,12 +78,14 @@ public class Screensaver extends javax.swing.JFrame implements Runnable {
             right = true;
         }
         // Verifica se a tecla seta para cima foi pressiona
-        else if (evt.getKeyCode() == KeyEvent.VK_UP) {
+        else if (evt.getKeyCode() == KeyEvent.VK_UP)
+        {
             // coloca o valor da variavel up em true enquanto a tecla estiver pressionada
             up = true;
         }
         // Verifica se a tecla seta para baixo foi pressiona
-        else if (evt.getKeyCode() == KeyEvent.VK_DOWN) {
+        else if (evt.getKeyCode() == KeyEvent.VK_DOWN)
+        {
             // coloca o valor da variavel down em true enquanto a tecla estiver pressionada
             down = true;
         }
@@ -147,61 +149,38 @@ public class Screensaver extends javax.swing.JFrame implements Runnable {
 
         // Instancie suas formas geométricas aqui
 
-        Rectangle[] r = new Rectangle[10];
-        Ellipse[] e = new Ellipse[10];
-        Square[] s = new Square[10];
+        ArrayList<Shape> s = new ArrayList<Shape>();
 
-        for (int i = 0; i < r.length; i++) {
-            r[i] = new Rectangle();
-            e[i] = new Ellipse();
-            s[i] = new Square();
+        for (int i = 0; i < 20; i++) {
+            s.add(new Rectangle());
+            s.add(new Square());
+            s.add(new Ellipse());
+            s.add(new Circle());
         }
 
-        //Impemente sua animação aqui
 
 
         // Como num desenho animado, as animações são criadas a partir da sobreposição de frames
-        while (true) {
+        while(true) {
             // Atualiza g
             g = getBufferStrategy().getDrawGraphics();
             //limpa tela
             g.clearRect(0, 0, getWidth(), getHeight());
+
+            // Implemente sua animação aqui.
+            for(Shape shape : s) {
+                shape.draw(g);
+                shape.move(width, height);
+            }
+
+            // Exibe a tela
+            getBufferStrategy().show();
+
+            // Unidade de tempo da animação
+            try {
+                Thread.sleep(5);
+            }catch  (InterruptedException ex) {}
         }
-
-           /* r1.draw(g);
-            r1.move(width, height);
-
-            r2.draw(g);
-            r2.move(width, height);
-            
-            r3.draw(g);
-            r3.move(width, height);
-
-            e1.draw(g);
-            e1.move(width, height);
-
-            e2.draw(g);
-            e2.move(width, height);
-
-            e3.draw(g);
-            e3.move(width, height);
-
-            */
-
-        // Implemente sua animação aqui.
-
-
-        // Exibe a tela
-        getBufferStrategy().show();
-
-        // Unidade de tempo da animação
-        try {
-            Thread.sleep(5);
-        } catch (InterruptedException ex) {
-        }
-
     }// Fim do Run
-}
 
-
-// Fim da classe Screen Protector
+}// Fim da classe Screen Protector
